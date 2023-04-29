@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>可视化界面</title>
+    <style>
+        /* 样式调整 */
+        body {
+            background-color: #ADD8E6;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: #D5FCF9;
+            padding: 10px;
+            margin-bottom: 50px;
+        }
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin:0;
+            padding:0;
+        }
+        .nav-menu li {
+            margin: 0 10px;
+        }
+        .nav-menu a {
+            text-decoration:none;
+            color:black;
+        }
+        header {
+            text-align: center;
+            margin-top: 50px;
+        }
+        h2 {
+            text-align: center;
+        }
+        div > button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin: 20px 10px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+        }
+        div > button:hover {
+            background-color: #0060CC;
+        }
+        form {
+            text-align:center;
+        }
+        button[type="submit"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 50px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0060CC;
+        }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="/home/">首页</a></li>
+        <li><a href="#">斗鱼</a></li>
+        <li><a href="/huya/">虎牙</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>斗鱼直播数据可视化</h1>
+    </header>
+
+    <main>
+      <h2>5分钟内直播数据</h2>
+      <div style="text-align: center;">
+        <button id="douyu_5_tab1" style="display: inline-block;">人气情况</button>
+        <button id="douyu_5_tab2" style="display: inline-block;">弹幕情况</button>
+        <button id="douyu_5_tab3" style="display: inline-block;">礼物情况</button>
+      </div>
+      <h2>1小时内直播数据</h2>
+      <div style="text-align: center;">
+        <button id="douyu_60" style="display: inline-block;">查看图表</button>
+      </div>
+    </main>
+
+    <form method="get" action="/">
+        <button type="submit">返回登录界面</button>
+    </form>
+
+    <script>
+      var douyuBtn1 = document.querySelector('#douyu_5_tab1');
+      var douyuBtn2 = document.querySelector('#douyu_5_tab2');
+      var douyuBtn3 = document.querySelector('#douyu_5_tab3');
+      var douyuBtn4 = document.querySelector('#douyu_60');
+      douyuBtn1.addEventListener('click', function() {
+        window.location.href = '/douyu/5/tab1';
+      });
+      douyuBtn2.addEventListener('click', function() {
+        window.location.href = '/douyu/5/tab2';
+      });
+      douyuBtn3.addEventListener('click', function() {
+        window.location.href = '/douyu/5/tab3';
+      });
+      douyuBtn4.addEventListener('click', function() {
+        window.location.href = '/douyu/60';
+      });
+    </script>
+
+  </body>
+</html>

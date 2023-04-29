@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+
+    
+</head>
+<body >
+            <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: block;
+        }
+
+        .chart-container:nth-child(n+2) {
+            display: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, 'cbaa4f71f3904ca9b9d4acb6d6b06bf6')">主播数量</button>
+            <button class="tablinks" onclick="showChart(event, 'de51dce3465e4f42a84b55920893b5e6')">观看人数</button>
+            <button class="tablinks" onclick="showChart(event, '8dd2edc7891f4a76a98ada57740aafb9')">弹幕情况</button>
+            <button class="tablinks" onclick="showChart(event, '87df957ec64a40209fdc20fc546c3a34')">礼物情况
+    <button style='position: absolute; right: 10px; top: 10px' onclick=window.location.href='/douyu/'>返回</button>
+    </button>
+    </div>
+
+    <div class="box">
+                <div id="cbaa4f71f3904ca9b9d4acb6d6b06bf6" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('cbaa4f71f3904ca9b9d4acb6d6b06bf6').style.width = document.getElementById('cbaa4f71f3904ca9b9d4acb6d6b06bf6').parentNode.clientWidth + 'px';
+        var chart_cbaa4f71f3904ca9b9d4acb6d6b06bf6 = echarts.init(
+            document.getElementById('cbaa4f71f3904ca9b9d4acb6d6b06bf6'), 'white', {renderer: 'canvas'});
+        var option_cbaa4f71f3904ca9b9d4acb6d6b06bf6 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "colorBy": "data",
+            "legendHoverLink": true,
+            "selectedMode": false,
+            "selectedOffset": 10,
+            "clockwise": true,
+            "startAngle": 90,
+            "minAngle": 0,
+            "minShowLabelAngle": 0,
+            "avoidLabelOverlap": true,
+            "stillShowZeroSum": true,
+            "percentPrecision": 2,
+            "showEmptyCircle": true,
+            "emptyCircleStyle": {
+                "color": "lightgray",
+                "borderColor": "#000",
+                "borderWidth": 0,
+                "borderType": "solid",
+                "borderDashOffset": 0,
+                "borderCap": "butt",
+                "borderJoin": "bevel",
+                "borderMiterLimit": 10,
+                "opacity": 1
+            },
+            "data": [
+                {
+                    "name": "\u82f1\u96c4\u8054\u76df",
+                    "value": 15
+                },
+                {
+                    "name": "\u70ed\u95e8\u6e38\u620f",
+                    "value": 10
+                },
+                {
+                    "name": "\u738b\u8005\u8363\u8000",
+                    "value": 8
+                },
+                {
+                    "name": "\u4e3b\u673a\u5176\u4ed6\u6e38\u620f",
+                    "value": 8
+                },
+                {
+                    "name": "DOTA2",
+                    "value": 5
+                },
+                {
+                    "name": "\u989c\u503c\uff08\u6a2a\u5c4f\uff09",
+                    "value": 10
+                },
+                {
+                    "name": "\u548c\u5e73\u7cbe\u82f1",
+                    "value": 5
+                },
+                {
+                    "name": "CS:GO",
+                    "value": 6
+                },
+                {
+                    "name": "lol\u4e91\u9876\u4e4b\u5f08",
+                    "value": 5
+                },
+                {
+                    "name": "\u821e\u8e48",
+                    "value": 9
+                }
+            ],
+            "radius": [
+                "0%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "label": {
+                "show": true,
+                "position": "inside",
+                "margin": 8,
+                "formatter": "{d}%"
+            },
+            "labelLine": {
+                "show": true,
+                "showAbove": false,
+                "length": 15,
+                "length2": 15,
+                "smooth": false,
+                "minTurnAngle": 90,
+                "maxSurfaceAngle": 90
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u82f1\u96c4\u8054\u76df",
+                "\u70ed\u95e8\u6e38\u620f",
+                "\u738b\u8005\u8363\u8000",
+                "\u4e3b\u673a\u5176\u4ed6\u6e38\u620f",
+                "DOTA2",
+                "\u989c\u503c\uff08\u6a2a\u5c4f\uff09",
+                "\u548c\u5e73\u7cbe\u82f1",
+                "CS:GO",
+                "lol\u4e91\u9876\u4e4b\u5f08",
+                "\u821e\u8e48"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "\u70ed\u5ea6\u524d10\u5206\u533a",
+            "target": "blank",
+            "subtext": "\u4e3b\u64ad\u6570\u91cf\u5360\u6bd4",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_cbaa4f71f3904ca9b9d4acb6d6b06bf6.setOption(option_cbaa4f71f3904ca9b9d4acb6d6b06bf6);
+    </script>
+                <div id="de51dce3465e4f42a84b55920893b5e6" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('de51dce3465e4f42a84b55920893b5e6').style.width = document.getElementById('de51dce3465e4f42a84b55920893b5e6').parentNode.clientWidth + 'px';
+        var chart_de51dce3465e4f42a84b55920893b5e6 = echarts.init(
+            document.getElementById('de51dce3465e4f42a84b55920893b5e6'), 'white', {renderer: 'canvas'});
+        var option_de51dce3465e4f42a84b55920893b5e6 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "colorBy": "data",
+            "legendHoverLink": true,
+            "selectedMode": false,
+            "selectedOffset": 10,
+            "clockwise": true,
+            "startAngle": 90,
+            "minAngle": 0,
+            "minShowLabelAngle": 0,
+            "avoidLabelOverlap": true,
+            "stillShowZeroSum": true,
+            "percentPrecision": 2,
+            "showEmptyCircle": true,
+            "emptyCircleStyle": {
+                "color": "lightgray",
+                "borderColor": "#000",
+                "borderWidth": 0,
+                "borderType": "solid",
+                "borderDashOffset": 0,
+                "borderCap": "butt",
+                "borderJoin": "bevel",
+                "borderMiterLimit": 10,
+                "opacity": 1
+            },
+            "data": [
+                {
+                    "name": "\u82f1\u96c4\u8054\u76df",
+                    "value": 7756
+                },
+                {
+                    "name": "\u70ed\u95e8\u6e38\u620f",
+                    "value": 9532
+                },
+                {
+                    "name": "\u738b\u8005\u8363\u8000",
+                    "value": 2526
+                },
+                {
+                    "name": "\u4e3b\u673a\u5176\u4ed6\u6e38\u620f",
+                    "value": 9352
+                },
+                {
+                    "name": "DOTA2",
+                    "value": 11931
+                },
+                {
+                    "name": "\u989c\u503c\uff08\u6a2a\u5c4f\uff09",
+                    "value": 5671
+                },
+                {
+                    "name": "\u548c\u5e73\u7cbe\u82f1",
+                    "value": 1756
+                },
+                {
+                    "name": "CS:GO",
+                    "value": 2537
+                },
+                {
+                    "name": "lol\u4e91\u9876\u4e4b\u5f08",
+                    "value": 1279
+                },
+                {
+                    "name": "\u821e\u8e48",
+                    "value": 4205
+                }
+            ],
+            "radius": [
+                "0%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "label": {
+                "show": true,
+                "position": "inside",
+                "margin": 8,
+                "formatter": "{d}%"
+            },
+            "labelLine": {
+                "show": true,
+                "showAbove": false,
+                "length": 15,
+                "length2": 15,
+                "smooth": false,
+                "minTurnAngle": 90,
+                "maxSurfaceAngle": 90
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u82f1\u96c4\u8054\u76df",
+                "\u70ed\u95e8\u6e38\u620f",
+                "\u738b\u8005\u8363\u8000",
+                "\u4e3b\u673a\u5176\u4ed6\u6e38\u620f",
+                "DOTA2",
+                "\u989c\u503c\uff08\u6a2a\u5c4f\uff09",
+                "\u548c\u5e73\u7cbe\u82f1",
+                "CS:GO",
+                "lol\u4e91\u9876\u4e4b\u5f08",
+                "\u821e\u8e48"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "\u70ed\u5ea6\u524d10\u5206\u533a",
+            "target": "blank",
+            "subtext": "\u89c2\u770b\u4eba\u6570\u5360\u6bd4",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_de51dce3465e4f42a84b55920893b5e6.setOption(option_de51dce3465e4f42a84b55920893b5e6);
+    </script>
+                <div id="8dd2edc7891f4a76a98ada57740aafb9" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('8dd2edc7891f4a76a98ada57740aafb9').style.width = document.getElementById('8dd2edc7891f4a76a98ada57740aafb9').parentNode.clientWidth + 'px';
+        var chart_8dd2edc7891f4a76a98ada57740aafb9 = echarts.init(
+            document.getElementById('8dd2edc7891f4a76a98ada57740aafb9'), 'white', {renderer: 'canvas'});
+        var option_8dd2edc7891f4a76a98ada57740aafb9 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "name": "\u5f39\u5e55\u6570\u91cf",
+            "colorBy": "data",
+            "legendHoverLink": true,
+            "selectedMode": false,
+            "selectedOffset": 10,
+            "clockwise": true,
+            "startAngle": 90,
+            "minAngle": 0,
+            "minShowLabelAngle": 0,
+            "avoidLabelOverlap": true,
+            "stillShowZeroSum": true,
+            "percentPrecision": 2,
+            "showEmptyCircle": true,
+            "emptyCircleStyle": {
+                "color": "lightgray",
+                "borderColor": "#000",
+                "borderWidth": 0,
+                "borderType": "solid",
+                "borderDashOffset": 0,
+                "borderCap": "butt",
+                "borderJoin": "bevel",
+                "borderMiterLimit": 10,
+                "opacity": 1
+            },
+            "data": [
+                {
+                    "name": "DOTA2",
+                    "value": 29015
+                },
+                {
+                    "name": "APEX",
+                    "value": 33990
+                },
+                {
+                    "name": "\u70ed\u95e8\u6e38\u620f",
+                    "value": 10532
+                },
+                {
+                    "name": "\u4e3b\u673a\u5176\u4ed6\u6e38\u620f",
+                    "value": 13922
+                },
+                {
+                    "name": "\u82f1\u96c4\u8054\u76df",
+                    "value": 13019
+                },
+                {
+                    "name": "\u7089\u77f3\u4f20\u8bf4",
+                    "value": 15540
+                },
+                {
+                    "name": "\u989c\u503c\uff08\u6a2a\u5c4f\uff09",
+                    "value": 1368
+                },
+                {
+                    "name": "\u6237\u5916",
+                    "value": 6424
+                },
+                {
+                    "name": "\u821e\u8e48",
+                    "value": 541
+                },
+                {
+                    "name": "CS:GO",
+                    "value": 749
+                }
+            ],
+            "radius": [
+                "0%",
+                "75%"
+            ],
+            "center": [
+                "30%",
+                "55%"
+            ],
+            "label": {
+                "show": true,
+                "position": "inside",
+                "margin": 8,
+                "formatter": "{d}%"
+            },
+            "labelLine": {
+                "show": true,
+                "showAbove": false,
+                "length": 15,
+                "length2": 15,
+                "smooth": false,
+                "minTurnAngle": 90,
+                "maxSurfaceAngle": 90
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "pie",
+            "name": "\u53d1\u5f39\u5e55\u4eba\u6570",
+            "colorBy": "data",
+            "legendHoverLink": true,
+            "selectedMode": false,
+            "selectedOffset": 10,
+            "clockwise": true,
+            "startAngle": 90,
+            "minAngle": 0,
+            "minShowLabelAngle": 0,
+            "avoidLabelOverlap": true,
+            "stillShowZeroSum": true,
+            "percentPrecision": 2,
+            "showEmptyCircle": true,
+            "emptyCircleStyle": {
+                "color": "lightgray",
+                "borderColor": "#000",
+                "borderWidth": 0,
+                "borderType": "solid",
+                "borderDashOffset": 0,
+                "borderCap": "butt",
+                "borderJoin": "bevel",
+                "borderMiterLimit": 10,
+                "opacity": 1
+            },
+            "data": [
+                {
+                    "name": "DOTA2",
+                    "value": 8302
+                },
+                {
+                    "name": "APEX",
+                    "value": 9849
+                },
+                {
+                    "name": "\u70ed\u95e8\u6e38\u620f",
+                    "value": 3773
+                },
+                {
+                    "name": "\u4e3b\u673a\u5176\u4ed6\u6e38\u620f",
+                    "value": 4531
+                },
+                {
+                    "name": "\u82f1\u96c4\u8054\u76df",
+                    "value": 3897
+                },
+                {
+                    "name": "\u7089\u77f3\u4f20\u8bf4",
+                    "value": 4675
+                },
+                {
+                    "name": "\u989c\u503c\uff08\u6a2a\u5c4f\uff09",
+                    "value": 298
+                },
+                {
+                    "name": "\u6237\u5916",
+                    "value": 899
+                },
+                {
+                    "name": "\u821e\u8e48",
+                    "value": 124
+                },
+                {
+                    "name": "CS:GO",
+                    "value": 227
+                }
+            ],
+            "radius": [
+                "0%",
+                "75%"
+            ],
+            "center": [
+                "70%",
+                "55%"
+            ],
+            "label": {
+                "show": true,
+                "position": "inside",
+                "margin": 8,
+                "formatter": "{d}%"
+            },
+            "labelLine": {
+                "show": true,
+                "showAbove": false,
+                "length": 15,
+                "length2": 15,
+                "smooth": false,
+                "minTurnAngle": 90,
+                "maxSurfaceAngle": 90
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "DOTA2",
+                "APEX",
+                "\u70ed\u95e8\u6e38\u620f",
+                "\u4e3b\u673a\u5176\u4ed6\u6e38\u620f",
+                "\u82f1\u96c4\u8054\u76df",
+                "\u7089\u77f3\u4f20\u8bf4",
+                "\u989c\u503c\uff08\u6a2a\u5c4f\uff09",
+                "\u6237\u5916",
+                "\u821e\u8e48",
+                "CS:GO"
+            ],
+            "selected": {},
+            "show": true,
+            "left": "18%",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "\u5f39\u5e55\u6570\u91cf-\u5f39\u5e55\u4eba\u6570\u5360\u6bd4",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_8dd2edc7891f4a76a98ada57740aafb9.setOption(option_8dd2edc7891f4a76a98ada57740aafb9);
+    </script>
+                <div id="87df957ec64a40209fdc20fc546c3a34" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('87df957ec64a40209fdc20fc546c3a34').style.width = document.getElementById('87df957ec64a40209fdc20fc546c3a34').parentNode.clientWidth + 'px';
+        var chart_87df957ec64a40209fdc20fc546c3a34 = echarts.init(
+            document.getElementById('87df957ec64a40209fdc20fc546c3a34'), 'white', {renderer: 'canvas'});
+        var option_87df957ec64a40209fdc20fc546c3a34 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "name": "\u793c\u7269\u603b\u503c",
+            "colorBy": "data",
+            "legendHoverLink": true,
+            "selectedMode": false,
+            "selectedOffset": 10,
+            "clockwise": true,
+            "startAngle": 90,
+            "minAngle": 0,
+            "minShowLabelAngle": 0,
+            "avoidLabelOverlap": true,
+            "stillShowZeroSum": true,
+            "percentPrecision": 2,
+            "showEmptyCircle": true,
+            "emptyCircleStyle": {
+                "color": "lightgray",
+                "borderColor": "#000",
+                "borderWidth": 0,
+                "borderType": "solid",
+                "borderDashOffset": 0,
+                "borderCap": "butt",
+                "borderJoin": "bevel",
+                "borderMiterLimit": 10,
+                "opacity": 1
+            },
+            "data": [
+                {
+                    "name": "DOTA2",
+                    "value": 52817
+                },
+                {
+                    "name": "APEX",
+                    "value": 12349
+                },
+                {
+                    "name": "\u70ed\u95e8\u6e38\u620f",
+                    "value": 21870
+                },
+                {
+                    "name": "\u4e3b\u673a\u5176\u4ed6\u6e38\u620f",
+                    "value": 21543
+                },
+                {
+                    "name": "\u82f1\u96c4\u8054\u76df",
+                    "value": 11129
+                },
+                {
+                    "name": "\u7089\u77f3\u4f20\u8bf4",
+                    "value": 17838
+                },
+                {
+                    "name": "\u989c\u503c\uff08\u6a2a\u5c4f\uff09",
+                    "value": 30561
+                },
+                {
+                    "name": "\u6237\u5916",
+                    "value": 7564
+                },
+                {
+                    "name": "\u821e\u8e48",
+                    "value": 12025
+                },
+                {
+                    "name": "CS:GO",
+                    "value": 2682
+                }
+            ],
+            "radius": [
+                "0%",
+                "75%"
+            ],
+            "center": [
+                "30%",
+                "55%"
+            ],
+            "label": {
+                "show": true,
+                "position": "inside",
+                "margin": 8,
+                "formatter": "{d}%"
+            },
+            "labelLine": {
+                "show": true,
+                "showAbove": false,
+                "length": 15,
+                "length2": 15,
+                "smooth": false,
+                "minTurnAngle": 90,
+                "maxSurfaceAngle": 90
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "pie",
+            "name": "\u9001\u793c\u4eba\u6570",
+            "colorBy": "data",
+            "legendHoverLink": true,
+            "selectedMode": false,
+            "selectedOffset": 10,
+            "clockwise": true,
+            "startAngle": 90,
+            "minAngle": 0,
+            "minShowLabelAngle": 0,
+            "avoidLabelOverlap": true,
+            "stillShowZeroSum": true,
+            "percentPrecision": 2,
+            "showEmptyCircle": true,
+            "emptyCircleStyle": {
+                "color": "lightgray",
+                "borderColor": "#000",
+                "borderWidth": 0,
+                "borderType": "solid",
+                "borderDashOffset": 0,
+                "borderCap": "butt",
+                "borderJoin": "bevel",
+                "borderMiterLimit": 10,
+                "opacity": 1
+            },
+            "data": [
+                {
+                    "name": "DOTA2",
+                    "value": 2526
+                },
+                {
+                    "name": "APEX",
+                    "value": 2008
+                },
+                {
+                    "name": "\u70ed\u95e8\u6e38\u620f",
+                    "value": 1566
+                },
+                {
+                    "name": "\u4e3b\u673a\u5176\u4ed6\u6e38\u620f",
+                    "value": 2436
+                },
+                {
+                    "name": "\u82f1\u96c4\u8054\u76df",
+                    "value": 793
+                },
+                {
+                    "name": "\u7089\u77f3\u4f20\u8bf4",
+                    "value": 2085
+                },
+                {
+                    "name": "\u989c\u503c\uff08\u6a2a\u5c4f\uff09",
+                    "value": 198
+                },
+                {
+                    "name": "\u6237\u5916",
+                    "value": 227
+                },
+                {
+                    "name": "\u821e\u8e48",
+                    "value": 29
+                },
+                {
+                    "name": "CS:GO",
+                    "value": 280
+                }
+            ],
+            "radius": [
+                "0%",
+                "75%"
+            ],
+            "center": [
+                "70%",
+                "55%"
+            ],
+            "label": {
+                "show": true,
+                "position": "inside",
+                "margin": 8,
+                "formatter": "{d}%"
+            },
+            "labelLine": {
+                "show": true,
+                "showAbove": false,
+                "length": 15,
+                "length2": 15,
+                "smooth": false,
+                "minTurnAngle": 90,
+                "maxSurfaceAngle": 90
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "DOTA2",
+                "APEX",
+                "\u70ed\u95e8\u6e38\u620f",
+                "\u4e3b\u673a\u5176\u4ed6\u6e38\u620f",
+                "\u82f1\u96c4\u8054\u76df",
+                "\u7089\u77f3\u4f20\u8bf4",
+                "\u989c\u503c\uff08\u6a2a\u5c4f\uff09",
+                "\u6237\u5916",
+                "\u821e\u8e48",
+                "CS:GO"
+            ],
+            "selected": {},
+            "show": true,
+            "left": "18%",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "\u793c\u7269\u603b\u503c-\u9001\u793c\u4eba\u6570\u5360\u6bd4",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_87df957ec64a40209fdc20fc546c3a34.setOption(option_87df957ec64a40209fdc20fc546c3a34);
+    </script>
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

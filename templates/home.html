@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>直播数据可视化系统</title>
+    <style>
+        /* 样式调整 */
+        body {
+            background-color: #ADD8E6;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: #D5FCF9;
+            padding: 10px;
+        }
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin:0;
+            padding:0;
+        }
+        .nav-menu li {
+            margin: 0 10px;
+        }
+        .nav-menu a {
+            text-decoration:none;
+            color:black;
+        }
+        header {
+            text-align: center;
+            margin-top: 50px;
+        }
+        p {
+            width:60%;
+            margin:30px auto;
+            padding:20px;
+            text-align:center;
+            border:none; /* 或者直接删除这一行 */
+        }
+        form {
+            text-align:center;
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0060CC;
+        }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#">首页</a></li>
+        <li><a href="/douyu/">斗鱼</a></li>
+        <li><a href="/huya/">虎牙</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>欢迎来到直播数据可视化系统</h1>
+    </header>
+
+    <main>
+      <p>这个系统在运行时已经爬取了数据，并存入数据库，然后对数据进行清洗和预处理，然后根据不同的指标对不同类型和主播进行排名，根据排名制作图表，进行可视化展示。</p>
+    </main>
+    <form method="get" action="/">
+        <button type="submit">返回登录界面</button>
+    </form>
+  </body>
+</html>
